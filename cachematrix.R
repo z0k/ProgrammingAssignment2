@@ -16,7 +16,7 @@ makeCacheMatrix <- function(x = matrix()) {
                 i <<- NULL
         }
         get <- function() x     # Matrix object is retrieved
-        setMatrix <- function(inverse) i <<- inverse    # Store computer inverse
+        setMatrix <- function(inverse) i <<- inverse    # Store computed inverse
         getMatrix <- function() i   # Retrieve computed inverse
         list(set = set, get = get,  # Return list of functions
              setMatrix = setMatrix,
@@ -32,6 +32,7 @@ makeCacheMatrix <- function(x = matrix()) {
 #  It checks to see whether or not a new inverse computation is required.
 #  If the matrix has a previously associated inverse calculation, the 
 #  calculation will not be repeated.
+
 cacheSolve <- function(x) {
         ## Return a matrix that is the inverse of 'x'
         i <- x$getMatrix()
