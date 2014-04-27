@@ -17,7 +17,7 @@ makeCacheMatrix <- function(x = matrix()) {
         }
         get <- function() x     # Matrix object is retrieved
         setMatrix <- function(inverse) i <<- inverse    # Store computer inverse
-        getMatrix <- function() i   # Retrieve computer inverse
+        getMatrix <- function() i   # Retrieve computed inverse
         list(set = set, get = get,  # Return list of functions
              setMatrix = setMatrix,
              getMatrix = getMatrix)
